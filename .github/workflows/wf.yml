@@ -1,7 +1,14 @@
 on: [ workflow_dispatch ]
 
 jobs:
-	docker-job:
-		runs-on: ubuntu-latest
-		steps:
-			- run: actions/checkout@v3
+  docker-job:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - run: |
+        docker run --mount folder ubuntu:latest
+        touch folder/newfile.txt
+        ls -l folder
+    - run: |
+        docker run --mount folder alpine:latest
+        rm folder/newfile.txt
