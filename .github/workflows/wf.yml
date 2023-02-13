@@ -9,4 +9,4 @@ jobs:
         touch file.txt
         sudo touch sfile.txt
         sudo whoami
-        ls -a
+        ls -la
