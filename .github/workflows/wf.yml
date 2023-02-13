@@ -6,6 +6,7 @@ jobs:
     steps:
     - run: |
         echo $USER
+        whoami
         touch file.txt
         sudo touch sfile.txt
         sudo whoami
