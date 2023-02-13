@@ -5,9 +5,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo $USER
         whoami
+        sudo whoami
+        
         touch file.txt
         sudo touch sfile.txt
-        sudo whoami
+        
         ls -la
+        
+        chmod ug-r sfile.txt
+        
+        ls -la
+        
+        cat sfile.txt
