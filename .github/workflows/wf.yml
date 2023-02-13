@@ -4,4 +4,9 @@ jobs:
   docker-job:
     runs-on: ubuntu-latest
     steps:
-    - run: echo $USER
+    - run: |
+        echo $USER
+        touch file.txt
+        sudo touch sfile.txt
+        sudo whoami
+        ls -a
