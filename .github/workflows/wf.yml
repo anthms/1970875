@@ -13,7 +13,7 @@ jobs:
         
         ls -la
         
-        chmod ug-r sfile.txt
+        sudo chmod ug-r sfile.txt
         
         ls -la
         
