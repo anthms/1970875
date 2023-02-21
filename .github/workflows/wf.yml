@@ -2,6 +2,7 @@ on: [ workflow_dispatch ]
 
 jobs:
   docker-job:
+    container: alpine:latest
     runs-on: ubuntu-latest
     steps:
     - run: |
