@@ -5,12 +5,14 @@ jobs:
     container: alpine:latest
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
     - run: |
         whoami
   
   non-docker-job:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
     - run: |
         whoami
         sudo whoami
