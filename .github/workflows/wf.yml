@@ -8,14 +8,10 @@ jobs:
     - run: |
         whoami
         sudo whoami
-        
-        touch file.txt
-        sudo touch sfile.txt
-        
-        ls -la
-        
-        sudo chmod go-r sfile.txt
-        
-        ls -la
-        
-        cat sfile.txt
+  
+  non-docker-job:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        whoami
+        sudo whoami
