@@ -7,7 +7,6 @@ jobs:
     steps:
     - run: |
         whoami
-        sudo whoami
   
   non-docker-job:
     runs-on: ubuntu-latest
